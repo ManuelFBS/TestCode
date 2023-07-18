@@ -2,34 +2,34 @@ const { DataTypes, DATE } = require("sequelize");
 
 module.exports = (sequelize) => {
   sequelize.define(
-    "Personas",
+    "Customers",
     {
-      id_personas: {
+      idPerson: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
       },
-      tipo_persona: {
+      typePeople: {
         type: DataTypes.ENUM("Natural", "Jurídica"),
         allowNull: false,
       },
-      tipo_documento: {
+      type_document: {
         type: DataTypes.ENUM("CC", "CE", "PA", "NIT"),
         allowNull: false,
       },
-      num_documento: {
+      idDocument: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      nombres: {
+      names: {
         type: DataTypes.STRING(25),
         allowNull: false,
       },
-      apellidos: {
+      surnames: {
         type: DataTypes.STRING(25),
         allowNull: false,
       },
-      telefono: {
+      phone: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
@@ -37,7 +37,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING(50),
         allowNull: false,
       },
-      direccion: {
+      address: {
         type: DataTypes.STRING(50),
         allowNull: false,
       },
